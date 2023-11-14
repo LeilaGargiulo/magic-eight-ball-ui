@@ -1,14 +1,26 @@
 document.getElementById("askButton").addEventListener("click", function(){
     let answer = '';
     let randomIndex = Math.floor(Math.random()* 5);
-
-    if(randomIndex === 0){
+ 
+    if (randomIndex === 0){
         answer = "It is certain.";
     } else if (randomIndex === 1){
-        answer = "Ask again later."
+        answer = "Ask again later.";
     } else if (randomIndex === 2){
-        answer = "Yes, Definitly!"
+        answer = "Yes, Definitly!";
     } else if (randomIndex === 3){
-        answer = "No"
-    } else if ()
+        answer = "No.";
+    } else if (randomIndex === 4){
+        answer = "Absolutely not!";
+    } else {
+        answer = "Never.";
+    }
+ 
+    //Check if a question is asked, trim mehod checks for blank output
+    let question = docuument.getElementById('question').value;
+    if (question.trim() === ''){
+        alert("Please enter a question.");
+    } else {
+        document.getElementById('answer').textContent = answer;
+    }
 });
