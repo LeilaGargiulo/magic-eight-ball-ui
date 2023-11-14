@@ -16,8 +16,8 @@ document.getElementById("askButton").addEventListener("click", function(){
         answer = "Never.";
     }
  
-    //Check if a question is asked, trim mehod checks for blank output
-    let question = docuument.getElementById('question').value;
+    //Check if a question is asked, trim method checks for blank output
+    let question = document.getElementById('question').value;
     if (question.trim() === ''){
         alert("Please enter a question.");
     } else {
